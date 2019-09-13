@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">repsolcamera</string>
+    <string name="selection_limiter_pix">No puedes seleccionar mas de %d fotos.</string>
+</resources>

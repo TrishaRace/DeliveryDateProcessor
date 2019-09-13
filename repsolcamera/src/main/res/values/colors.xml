@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryRepsol">#ff531e</color>
+    <color name="colorPrimaryLightRepsol">#cd451b</color>
+
+
+    <!--REPSOL COLORS-->
+
+    <color name="orangeRepsol">#FF8200</color>
+    <color name="darkOrangeRepsol">#b35c00</color>
+    <color name="whiteRepsol">#FFFFFF</color>
+    <color name="darkGreyRepsol">#6E6259</color>
+    <color name="midGreyRepsol">#ACA39A</color>
+</resources>

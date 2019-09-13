@@ -1,0 +1,2 @@
+include ':app', ':scanlibrary', ':repsolcamera'
+rootProject.name='DeliveryNotesProcessor'
