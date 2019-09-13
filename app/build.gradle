@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'com.google.gms.google-services'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -34,4 +36,6 @@ dependencies {
 
     implementation project(path: ':repsolcamera')
     implementation project(path: ':scanlibrary')
+
+    implementation 'com.google.firebase:firebase-ml-vision:23.0.0'
 }

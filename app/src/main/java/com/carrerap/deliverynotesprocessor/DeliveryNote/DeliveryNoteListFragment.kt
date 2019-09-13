@@ -7,6 +7,8 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.carrerap.deliverynotesprocessor.R
+import kotlinx.android.synthetic.main.fragment_list_delivery_note.*
 
 class DeliveryNoteListFragment : Fragment(){
     var resultList : ArrayList<String> = ArrayList()

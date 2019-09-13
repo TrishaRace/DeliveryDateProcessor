@@ -8,6 +8,8 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 
+import java.io.File;
+
 /**
  * Created by jhansi on 28/03/15.
  */
@@ -20,16 +22,13 @@ public class ScanActivity extends Activity implements IScanner, ComponentCallbac
         init();
     }
 
-    private void init() {
-        PickImageFragment fragment = new PickImageFragment();
-        Bundle bundle = new Bundle();
-        bundle.putInt(ScanConstants.OPEN_INTENT_PREFERENCE, getPreferenceContent());
-        fragment.setArguments(bundle);
-        android.app.FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.content, fragment);
-        fragmentTransaction.commit();
+    private void init(){
+        String imagePath = getIntent().getStringExtra("imagePath");
+        Uri imageUri = Uri.fromFile( new File(imagePath));
+        onBitmapSelect(imageUri);
     }
+
+
 
     protected int getPreferenceContent() {
         return getIntent().getIntExtra(ScanConstants.OPEN_INTENT_PREFERENCE, 0);
