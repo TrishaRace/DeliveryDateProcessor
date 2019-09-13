@@ -238,7 +238,7 @@ public class PolygonView extends FrameLayout {
                 default:
                     break;
             }
-            polygonView.invalidate();
+            //polygonView.invalidate();
             return true;
         }
     }
@@ -286,7 +286,7 @@ public class PolygonView extends FrameLayout {
                 default:
                     break;
             }
-            polygonView.invalidate();
+           // polygonView.invalidate();
             return true;
         }
 

@@ -173,8 +173,8 @@ public class MainImageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
         public Holder(View itemView) {
             super(itemView);
-            sdv = itemView.findViewById(R.id.sdv);
-            selection = itemView.findViewById(R.id.selection);
+            sdv = (SimpleDraweeView) itemView.findViewById(R.id.sdv);
+            selection = (ImageView) itemView.findViewById(R.id.selection);
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);
             sdv.setLayoutParams(layoutParams);
@@ -199,7 +199,7 @@ public class MainImageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
         public HeaderHolder(View itemView) {
             super(itemView);
-            header = itemView.findViewById(R.id.header);
+            header = (TextView) itemView.findViewById(R.id.header);
         }
     }
 }

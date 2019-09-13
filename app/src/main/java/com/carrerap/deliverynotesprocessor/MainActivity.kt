@@ -11,7 +11,14 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
+import com.carrerap.deliverynotesprocessor.DeliveryNote.DeliveryNoteListFragment
+import com.google.firebase.FirebaseApp
+import com.google.firebase.ml.vision.FirebaseVision
+import com.google.firebase.ml.vision.common.FirebaseVisionImage
+import com.google.firebase.ml.vision.text.FirebaseVisionText
 import com.repsol.repsolcamera.RepsolCamera
+import com.scanlibrary.ScanActivity
+import com.scanlibrary.ScanConstants
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
 

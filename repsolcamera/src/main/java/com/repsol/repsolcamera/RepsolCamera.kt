@@ -52,6 +52,8 @@ import io.fotoapparat.view.CameraView
 
 import io.fotoapparat.result.transformer.scaled
 import io.fotoapparat.selector.*
+import kotlinx.android.synthetic.main.activity_main_lib.*
+import kotlinx.android.synthetic.main.activity_main_lib.view.*
 
 class RepsolCamera : AppCompatActivity(), View.OnTouchListener {
     private val permissionsDelegate = PermissionsDelegate(this)
@@ -291,7 +293,7 @@ class RepsolCamera : AppCompatActivity(), View.OnTouchListener {
         initialize()
 
         hasCameraPermission = permissionsDelegate.hasCameraPermission()
-        mCamera = findViewById(R.id.camera_view)
+        mCamera = camera_view
         if (hasCameraPermission) {
 
             fotoapparat = Fotoapparat
@@ -341,22 +343,22 @@ class RepsolCamera : AppCompatActivity(), View.OnTouchListener {
         }
 
         colorPrimaryDark = ResourcesCompat.getColor(resources, R.color.orangeRepsol, theme)
-        clickme = findViewById(R.id.clickme)
-        flashBtn = findViewById(R.id.bFlash)
-        topbar = findViewById(R.id.topbar)
-        selection_count = findViewById(R.id.selection_count)
-        selection_ok = findViewById(R.id.selection_ok)
-        selection_back = findViewById(R.id.selection_back)
-        sendButton = findViewById(R.id.sendButton)
-        img_count = findViewById(R.id.img_count)
-        mBubbleView = findViewById(R.id.fastscroll_bubble)
-        mHandleView = findViewById(R.id.fastscroll_handle)
-        mScrollbar = findViewById(R.id.fastscroll_scrollbar)
+        clickme = findViewById(R.id.clickme) as ImageView
+        flashBtn = findViewById(R.id.bFlash) as ImageButton
+        topbar = findViewById(R.id.topbar) as View
+        selection_count = findViewById(R.id.selection_count) as TextView
+        selection_ok = findViewById(R.id.selection_ok) as TextView
+        selection_back =findViewById(R.id.selection_back) as ImageView
+        sendButton = findViewById(R.id.sendButton) as FrameLayout
+        img_count = findViewById(R.id.img_count) as TextView
+        mBubbleView = findViewById(R.id.fastscroll_bubble) as TextView
+        mHandleView = findViewById(R.id.fastscroll_handle) as ImageView
+        mScrollbar = findViewById(R.id.fastscroll_scrollbar) as View
         mScrollbar.visibility = View.GONE
         mBubbleView.visibility = View.GONE
-        fl_topbar = findViewById(R.id.fl_topbar)
-        tv_longclick_explaining = findViewById(R.id.tv_longclick_explaining)
-        if (SelectionCount > 1) {
+        fl_topbar = findViewById(R.id.fl_topbar) as FrameLayout
+        tv_longclick_explaining = findViewById(R.id.tv_longclick_explaining) as TextView
+            if (SelectionCount > 1) {
             tv_longclick_explaining.text =
                 "Recuerda que puedes seleccionar mas de una foto sí las mantienes pulsadas"
         } else {
@@ -366,17 +368,17 @@ class RepsolCamera : AppCompatActivity(), View.OnTouchListener {
             )
             topbar.layoutParams = lp
         }
-        bottomButtons = findViewById(R.id.bottomButtons)
+        bottomButtons = findViewById(R.id.bottomButtons) as View
         TOPBAR_HEIGHT = Utility.convertDpToPixel(56f, this@RepsolCamera)
-        status_bar_bg = findViewById(R.id.status_bar_bg)
-        instantRecyclerView = findViewById(R.id.instantRecyclerView)
+        status_bar_bg = findViewById(R.id.status_bar_bg) as View
+        instantRecyclerView = findViewById(R.id.instantRecyclerView) as RecyclerView
         val linearLayoutManager = LinearLayoutManager(this)
         linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
         instantRecyclerView.layoutManager = linearLayoutManager
         initaliseadapter = InstantImageAdapter(this)
         initaliseadapter.AddOnSelectionListner(onSelectionListner)
         instantRecyclerView.adapter = initaliseadapter
-        recyclerView = findViewById(R.id.recyclerView)
+        recyclerView = findViewById(R.id.recyclerView) as RecyclerView
         recyclerView.addOnScrollListener(mScrollListener)
         mainFrameLayout = findViewById(R.id.mainFrameLayout)
         BottomBarHeight = Utility.getSoftButtonsBarSizePort(this)
@@ -494,7 +496,7 @@ class RepsolCamera : AppCompatActivity(), View.OnTouchListener {
     }
 
     private fun setBottomSheetBehavior() {
-        val bottomSheet = findViewById<View>(R.id.bottom_sheet)
+        val bottomSheet = findViewById(R.id.bottom_sheet) as FrameLayout
         mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheet)
         mBottomSheetBehavior.peekHeight = Utility.convertDpToPixel(194f, this).toInt()
         mBottomSheetBehavior.setBottomSheetCallback(object :

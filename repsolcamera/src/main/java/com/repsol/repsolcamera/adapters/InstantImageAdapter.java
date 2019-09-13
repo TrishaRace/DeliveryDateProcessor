@@ -130,8 +130,8 @@ public class InstantImageAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
         public Holder(View itemView) {
             super(itemView);
-            sdv = itemView.findViewById(R.id.sdv);
-            selection = itemView.findViewById(R.id.selection);
+            sdv = (SimpleDraweeView) itemView.findViewById(R.id.sdv);
+            selection = (ImageView) itemView.findViewById(R.id.selection);
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);
         }
