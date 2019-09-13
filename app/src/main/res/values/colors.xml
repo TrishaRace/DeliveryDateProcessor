@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#ff531e</color>
+    <color name="colorPrimaryDark">#cd451b</color>
+    <color name="colorAccent">#ff531e</color>
+
+
+    <!--REPSOL COLORS-->
+
+    <color name="orangeRepsol">#FF8200</color>
+    <color name="darkOrangeRepsol">#b35c00</color>
+    <color name="whiteRepsol">#FFFFFF</color>
+    <color name="darkGreyRepsol">#6E6259</color>
+    <color name="midGreyRepsol">#ACA39A</color>
 </resources>
