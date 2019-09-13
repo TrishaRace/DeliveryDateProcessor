@@ -7,12 +7,36 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Resumen de albarán"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:id="@+id/lyFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <ImageButton
+        android:id="@+id/b_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@android:color/white"
+        android:text="Nuevo albarán"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"/>
 
 </android.support.constraint.ConstraintLayout>
