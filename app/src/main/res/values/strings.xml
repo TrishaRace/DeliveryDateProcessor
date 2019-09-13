@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DeliveryNotesProcessor</string>
+    <string name="anyDeliveryNoteCapturedAlert">Aún no hay ningún albarán capturado\nPulse \'+\' para añadir uno nuevo</string>
+
 </resources>
